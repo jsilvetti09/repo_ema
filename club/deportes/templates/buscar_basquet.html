@@ -1,0 +1,25 @@
+{% extends "padre.html" %}
+
+{% block titulo %}
+
+Buscar Jugador Basquet
+
+{% endblock %}
+
+{% block botones %}
+
+<a class="navbar-brand" href="{% url 'inicio' %}">Inicio</a>
+                <a class="navbar-brand" href="{% url 'CrearJugadores' %}">Crear Jugador</a>
+                
+                <a class="navbar-brand" href="{% url 'BuscarBasquet' %}">Buscar jugador</a>
+                
+{% endblock %}
+
+{% block formulario %}
+
+<center><form method="get" action="{% url 'ResultadoBasquet' %}">
+    <input type="text" name="jugador">
+    <input type="submit" value="Buscar">
+</form></center>
+
+{% endblock %}

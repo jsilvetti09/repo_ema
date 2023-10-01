@@ -1,0 +1,16 @@
+{% extends "padre.html" %}
+
+{% block titulo %}
+
+Jugadores de basquet
+
+{% endblock %}
+
+{% block botones %}
+
+<a class="navbar-brand" href="{% url 'inicio' %}">Inicio</a>
+                <a class="navbar-brand" href="{% url 'CrearBasquet' %}">Crear Jugador de Basquet</a>
+                
+                <a class="navbar-brand" href="{% url 'BuscarBasquet' %}">Buscar Jugador de Basquet</a>
+                
+{%endblock%}

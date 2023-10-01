@@ -1,0 +1,24 @@
+{% extends "padre.html" %}
+
+{% block titulo %}
+
+Resultado
+
+{% endblock %}
+
+
+
+{% block formulario %}
+  {% if res %}
+    <ul>
+      {% for jugador in res %}
+        <li>
+          Jugador: {{ jugador.nombre }} -- Apellido: {{ jugador.apellido }} 
+          -- Posicion: {{jugador.posicion}}
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <h3>No hay resultados que coincidan con tu búsqueda</h3>
+  {% endif %}
+{% endblock %}

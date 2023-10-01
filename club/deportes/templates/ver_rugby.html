@@ -1,0 +1,19 @@
+{% extends "padre.html" %}
+
+{% block titulo %}
+
+Jugadores de Rugby
+
+{% endblock %}
+
+{% block botones %}
+
+<a class="navbar-brand" href="{% url 'inicio' %}">Inicio</a>
+                <a class="navbar-brand" href="{% url 'CrearRugby' %}">Crear Jugador Rugby</a>
+                
+                <a class="navbar-brand" href="{% url 'BuscarRugby' %}">Buscar jugador Rugby</a>
+                
+{% endblock %}
+
+ 
+ 

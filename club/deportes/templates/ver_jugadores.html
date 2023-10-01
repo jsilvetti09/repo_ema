@@ -1,0 +1,36 @@
+{% extends "padre.html" %}
+
+{% block titulo %}
+
+Jugadores 
+
+{% endblock %}
+
+{% block botones %}
+
+<a class="navbar-brand" href="{% url 'inicio' %}">Inicio</a>
+                <a class="navbar-brand" href="{% url 'CrearJugadores' %}">Crear Jugador</a>
+
+                
+                
+                <a class="navbar-brand" href="{% url 'BuscarJugador' %}">Buscar jugador</a>
+                
+{% endblock %}
+
+{% block formulario %}
+  
+<ul>
+    {% for jugador in jugador %}
+        <li>
+            Jugador: {{ jugador.nombre }} -- Apellido: {{ jugador.apellido }} -- Edad: {{ jugador.edad }} -- Estatura: {{ jugador.estatura }} -- Deporte: {{ jugador.deporte }}
+            
+        </li>
+        <a class="navbar-brand" href="{% url 'BorrarJugador' jugador.nombre %}">Borrar</a> 
+        
+    {% endfor %}
+</ul>
+
+{% endblock %}
+
+ 
+ 

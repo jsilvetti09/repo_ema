@@ -1,0 +1,15 @@
+{% extends "padre.html" %}
+
+{% block titulo %}
+
+Bienvenido!
+
+{% endblock %}
+
+{% block botones %}
+<a class="navbar-brand" href="{% url 'inicio' %}">Inicio</a>
+                <a class="navbar-brand" href="{% url 'ver_jugadores' %}">Jugadores</a>
+                <a class="navbar-brand" href="{% url 'ver_futbol' %}">Futbol</a>
+                <a class="navbar-brand" href="{% url 'ver_basquet' %}">Basquet</a>
+                <a class="navbar-brand" href="{% url 'ver_rugby' %}">Rugby</a>
+{% endblock %}

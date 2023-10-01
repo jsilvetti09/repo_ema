@@ -1,0 +1,29 @@
+{% extends "padre.html" %}
+
+{% block titulo %}
+
+Crear Jugador de Futbol
+
+{% endblock %}
+
+{% block formulario %}
+<form action="" method = "POST">{% csrf_token %}
+<table> 
+
+{{form1.as_table}}
+
+</table>
+<input type ="submit" value = "Enviar">
+
+</form>
+
+{% endblock %}
+
+{% block botones %}
+<a class="navbar-brand" href="{% url 'inicio' %}">Inicio</a>
+                <a class="navbar-brand" href="{% url 'ver_jugadores' %}">Jugadores</a>
+                <a class="navbar-brand" href="{% url 'ver_futbol' %}">Futbol</a>
+                <a class="navbar-brand" href="{% url 'ver_basquet' %}">Basquet</a>
+                <a class="navbar-brand" href="{% url 'ver_rugby' %}">Rugby</a>
+                <a class="btn btn-primary" href="#signup">Registrarse</a>
+{% endblock %}
